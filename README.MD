@@ -1,6 +1,7 @@
 # Book Search
-![example workflow](https://github.com/fheutz/book-search/actions/workflows/main.yaml/badge.svg)
 <img src="docs/book_search_logo.png" alt="BooksIcon" width="100"/>
+
+![example workflow](https://github.com/fheutz/book-search/actions/workflows/main.yaml/badge.svg)
 
 ----
 ## Description
