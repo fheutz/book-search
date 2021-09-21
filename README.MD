@@ -55,7 +55,6 @@ const amazonOffer = amazonClient.getPriceByISBN(isbn)
 
 ## Documentation
 
-* [Clients](docs/clients.md) - currently implemented Shop Clients
 * [Technical Decisions](docs/technicalDecision.md) - technical decisions
 * [Testing](docs/testing.md) - testing concept and current test results
 
