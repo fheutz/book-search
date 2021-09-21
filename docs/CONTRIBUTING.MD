@@ -50,6 +50,7 @@ npm run lint            # Linting using TSLint
 # Roadmap
 Possible additions to this Package could be 
 * Implement more Shops and Currencies
+* JSDoc is not written for everything yet
 * Implement a Digital vs Physical Book search
 * Implement audio Book search
 * More in depth cleanup of inputs
