@@ -13,4 +13,5 @@ jobs:
               with:
                   github-token: ${{ secrets.GITHUB_TOKEN }}
                   test-script: npm run test:unit
+                  coverage-file: ./coverage/coverage-final.json
                   #   threshold: 80 # optional parameter
