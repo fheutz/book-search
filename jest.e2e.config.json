@@ -1,0 +1,8 @@
+{
+    "transform": {
+      "^.+\\.(t|j)sx?$": "ts-jest"
+    },
+    "collectCoverage":false,
+    "testTimeout":15000,
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]
+  }
