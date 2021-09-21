@@ -1,6 +1,6 @@
 {
   "name": "@fheutz/book-search",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A package comparing Bookprices from different shops by ISBN or Bookname.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
