@@ -1,9 +1,13 @@
 # Book Search
+![example workflow](https://github.com/fheutz/book-search/actions/workflows/main.yaml/badge.svg)
+<img src="docs/book_search_logo.png" alt="BooksIcon" width="100"/>
 
+----
 ## Description
 Book search is a library that helps you find the best book prices for any book you are looking for.
 It can also be used to find ISBN numbers of books, or search for book titles that you only know parts of.
 
+----
 ## Features
 This library currently supports the following shops:
 * Amazon
@@ -13,6 +17,8 @@ This library currently supports the following shops:
 These currencies are supported:
 * Dollar
 * EURO_GER
+
+----
 ## Getting started
 
 Installation
@@ -52,15 +58,17 @@ amazonClient.setCurrency(Currency.EUR_GER)
 // Executing getPriceByISBN on the Amazon client
 const amazonOffer = amazonClient.getPriceByISBN(isbn) 
 ```
-
+----
 ## Documentation
 
 * [Technical Decisions](docs/technicalDecision.md) - technical decisions
 * [Testing](docs/testing.md) - testing concept and current test results
 
+----
 ## Contributing & Developing
 This library is designed to be extended to use other bookshops and currencies, if you want to get into developing check the [development and contribution guide](docs/CONTRIBUTING.MD) for additional information.
 
+----
 ## Limitations 
 
 This library does not make a lot of sense for countries like Germany, because of laws that ensure Fixed book prices. Read Further: 

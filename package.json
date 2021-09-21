@@ -1,6 +1,6 @@
 {
   "name": "@fheutz/book-search",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A package comparing Bookprices from different shops by ISBN or Bookname.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -15,6 +15,7 @@
   ],
   "scripts": {
     "test:unit": "jest --verbose --testPathPattern=src/__tests__/unit",
+    "test:ci": "jest --ci --json --outputFile='report.json' --coverageReporters='text' --coverageReporters='text-summary' --testPathPattern=src/__tests__/unit",
     "test:e2e": "jest -c jest.e2e.config.json --testPathPattern=src/__tests__/e2e --runInBand",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
