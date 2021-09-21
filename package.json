@@ -15,6 +15,7 @@
   ],
   "scripts": {
     "test:unit": "jest --verbose --testPathPattern=src/__tests__/unit",
+    "test:ci": "jest --ci --coverageReporters='text' --coverageReporters='text-summary' --testPathPattern=src/__tests__/unit",
     "test:e2e": "jest -c jest.e2e.config.json --testPathPattern=src/__tests__/e2e --runInBand",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
