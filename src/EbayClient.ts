@@ -5,7 +5,7 @@ import { TopLevelDomain, ShopClient, errors, Currency, CurrencyType, ShopOffer }
 // When looking for books this seems to be the reliable selector to get a price :)
 const BOOKS_PRICE_SELECTOR = '.s-item__price';
 const BOOKS_LINK_SELECTOR = '.s-item__link';
-class EbayClient implements ShopClient {
+export class EbayClient implements ShopClient {
   private baseURL = 'https://www.ebay.de/sch/i.html?_nkw=';
   private currencyHandler = new CurrencyHandler();
   private currency: CurrencyType = this.currencyHandler.getCurrencyObject(Currency.EURO_GER);
@@ -51,5 +51,3 @@ class EbayClient implements ShopClient {
     return { currency: this.currencyIdentifier, price: parseFloat(price), directLink: directlink };
   };
 }
-
-export default EbayClient;

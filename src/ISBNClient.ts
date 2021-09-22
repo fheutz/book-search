@@ -13,7 +13,7 @@ type GoogleResponseItem = {
 const VOLUMESAPI = 'https://www.googleapis.com/books/v1/volumes';
 
 /** Client to get ISBN numbers and validating them from GoogleBooks API */
-class ISBNClient {
+export class ISBNClient {
   /**
    * @param  {string} title full title or keyword of the title
    * @returns a Promise<IsbnResult[]> returns a list of IsbnResults that match the title query terms
@@ -57,5 +57,3 @@ class ISBNClient {
     return ISBNInfo.isbn13h;
   };
 }
-
-export default ISBNClient;

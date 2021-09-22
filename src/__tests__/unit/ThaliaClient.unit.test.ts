@@ -1,4 +1,4 @@
-import ThaliaClient from '../../ThaliaClient';
+import {ThaliaClient} from '../../ThaliaClient';
 import axios from 'axios';
 import { Currency } from '../../common/types';
 import { CurrencyHandler } from '../../common/classes';

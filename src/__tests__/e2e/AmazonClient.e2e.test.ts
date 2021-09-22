@@ -1,4 +1,4 @@
-import AmazonClient from '../../AmazonClient';
+import {AmazonClient} from '../../AmazonClient';
 import { Currency, TopLevelDomain } from '../../common/types';
 
 const amazonClient = new AmazonClient();

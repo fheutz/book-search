@@ -1,4 +1,4 @@
-import AmazonClient from '../../AmazonClient';
+import {AmazonClient} from '../../AmazonClient';
 import axios from 'axios';
 import { Currency, TopLevelDomain } from '../../common/types';
 import { CurrencyHandler } from '../../common/classes';

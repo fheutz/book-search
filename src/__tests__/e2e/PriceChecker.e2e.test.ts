@@ -1,5 +1,5 @@
 import { Currency, ShopOffer } from '../../common/types';
-import Pricechecker from '../../PriceChecker';
+import {Pricechecker} from '../../PriceChecker';
 
 // Initialize Clients
 const priceChecker = new Pricechecker();
