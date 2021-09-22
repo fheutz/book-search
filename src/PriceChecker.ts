@@ -1,10 +1,11 @@
-import { AmazonClient, EbayClient, ISBNClient } from '.';
-import { Currency, ShopOffer, errors } from './common/types';
+import { AmazonClient, EbayClient, ISBNClient, ThaliaClient } from '.';
+import { Currency, ShopOffer, errors, ShopClients } from './common/types';
 
-class Pricechecker {
+export class Pricechecker {
   amazonClient = new AmazonClient();
   ebayClient = new EbayClient();
   isbnClient = new ISBNClient();
+  thaliaClient = new ThaliaClient();
 
   setCurrency = (currency: Currency) => {
     this.ebayClient.setCurrency(currency);
@@ -16,10 +17,28 @@ class Pricechecker {
     const isbnResult = await this.isbnClient.getFirstISBNByTitle(title);
     const isbn = isbnResult.isbn[0].identifier;
     const bookPrices: ShopOffer[] = [];
-    const ebayPrice = await this.ebayClient.getBookPriceByISBN(isbn);
-    bookPrices.push(ebayPrice);
-    const amazonPrice = await this.amazonClient.getBookPriceByISBN(isbn);
-    bookPrices.push(amazonPrice);
+
+    try {
+      const ebayPrice = await this.ebayClient.getBookPriceByISBN(isbn);
+      bookPrices.push(ebayPrice);
+    } catch (error) {
+      // We want to have those errors none blocking here, so we are just logging them for now
+      console.log(error)
+    }
+    try {
+      const amazonPrice = await this.amazonClient.getBookPriceByISBN(isbn);
+      bookPrices.push(amazonPrice);
+    } catch (error) {
+      // We want to have those errors none blocking here, so we are just logging them for now
+      console.log(error)
+    }
+    try {
+      const thaliaPrice = await this.thaliaClient.getBookPriceByISBN(isbn);
+      bookPrices.push(thaliaPrice);
+    } catch (error) {
+      // We want to have those errors none blocking here, so we are just logging them for now
+      console.log(error)
+    }
     return bookPrices;
   };
 
@@ -33,5 +52,3 @@ class Pricechecker {
     return bestPrice;
   };
 }
-
-export default Pricechecker;

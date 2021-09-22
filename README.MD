@@ -42,7 +42,7 @@ const priceByName = pricechecker.getBestPriceByBookTitle('Ultralearing');
 const listOfOffers = pricechecker.comparePricesByBookTitle('Ultralearning');
 ```
 
-Using the specific Clients to have more control of the processes
+Using the specific Clients to have more control of the processes.
 
 ```Typescript
 // Import Statement

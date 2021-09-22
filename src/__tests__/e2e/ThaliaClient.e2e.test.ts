@@ -1,4 +1,4 @@
-import ThaliaClient from '../../ThaliaClient';
+import {ThaliaClient} from '../../ThaliaClient';
 import { Currency, TopLevelDomain } from '../../common/types';
 
 const thaliaClient = new ThaliaClient();
@@ -8,6 +8,6 @@ describe('Amazon Client tests against Amazon', () => {
     let shopOffer = await thaliaClient.getBookPriceByISBN(ULTRALEARNINGISBN);
     console.log(shopOffer)
     expect(shopOffer.currency).toContain('€');
-    expect(shopOffer.directLink).toContain('https://thalia.de');
+    expect(shopOffer.directLink).toContain('https://www.thalia.de');
   });
 });

@@ -1,4 +1,4 @@
-import ISBNClient from '../../ISBNClient';
+import {ISBNClient} from '../../ISBNClient';
 import axios from 'axios';
 
 // Initiating the ISBN Client

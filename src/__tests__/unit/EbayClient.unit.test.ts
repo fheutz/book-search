@@ -1,4 +1,4 @@
-import EbayClient from '../../EbayClient';
+import {EbayClient} from '../../EbayClient';
 import axios from 'axios';
 import { Currency } from '../../common/types';
 import { CurrencyHandler } from '../../common/classes';

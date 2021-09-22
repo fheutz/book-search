@@ -5,7 +5,7 @@ import { TopLevelDomain, ShopClient, Currency, ShopOffer, CurrencyType, errors }
 
 // When looking for books this seems to be the reliable selector to get a price :)
 const BOOKS_PRICE_SELECTOR = '.a-color-price';
-class AmazonClient implements ShopClient {
+export class AmazonClient implements ShopClient {
   private baseURL: string = 'https://amazon.de/dp/';
   private currencyHandler = new CurrencyHandler();
   private currency: CurrencyType = this.currencyHandler.getCurrencyObject(Currency.EURO_GER);
@@ -48,4 +48,4 @@ class AmazonClient implements ShopClient {
   };
 }
 
-export default AmazonClient;
+ 

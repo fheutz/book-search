@@ -5,7 +5,7 @@ import { TopLevelDomain, ShopClient, Currency, ShopOffer, CurrencyType, errors }
 
 // When looking for books this seems to be the reliable selector to get a price :)
 const BOOKS_PRICE_SELECTOR = '.preis';
-class ThaliaClient implements ShopClient {
+export class ThaliaClient implements ShopClient {
   private baseURL: string = 'https://www.thalia.de/suche?sq=';
   private currencyHandler = new CurrencyHandler();
   private currency: CurrencyType = this.currencyHandler.getCurrencyObject(Currency.EURO_GER);
@@ -44,5 +44,3 @@ class ThaliaClient implements ShopClient {
     return { currency: '€', price: parseFloat(price), directLink: this.baseURL + this.isbnString };
   };
 }
-
-export default ThaliaClient;

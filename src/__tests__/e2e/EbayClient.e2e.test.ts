@@ -1,4 +1,4 @@
-import EbayClient from '../../EbayClient';
+import {EbayClient} from '../../EbayClient';
 import { Currency } from '../../common/types';
 
 const ebayClient = new EbayClient();
