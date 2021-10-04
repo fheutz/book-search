@@ -1,6 +1,6 @@
 import {AmazonClient} from '../../AmazonClient';
 import axios from 'axios';
-import { Currency, TopLevelDomain } from '../../common/types';
+import { Currency, errors, TopLevelDomain } from '../../common/types';
 import { CurrencyHandler } from '../../common/classes';
 
 const amazonClient = new AmazonClient();
@@ -14,7 +14,7 @@ describe('MOCK: Amazon Client tests with mocks', () => {
   it('Throws an error when you cannot fetch from Amazon', async () => {
     jest.mock('axios');
     axios.get = jest.fn().mockImplementationOnce(() => new Error('Generic Error'));
-    expect(amazonClient.getBookPriceByISBN(ULTRALEARNINGISBN)).resolves.toThrowError();
+    expect(amazonClient.getBookPriceByISBN(ULTRALEARNINGISBN)).rejects.toThrow(errors.connectionError);
   });
 
   it('Returns a Price in € for a book', async () => {

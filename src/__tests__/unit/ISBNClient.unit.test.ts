@@ -30,7 +30,7 @@ describe('ISBN Client tests with Mocks', () => {
   it('throws an error if we get invalid Feedback from Google', async () => {
     axios.get = jest.fn().mockImplementationOnce(() => new Error('Generic Failure'));
     // We need to wait for the promise to resolve to get the error
-    expect(isbnClient.getISBNByTitle('doesnt matter')).resolves.toThrow(Error);
+    expect(isbnClient.getISBNByTitle('doesnt matter')).rejects.toThrow(Error);
   });
 
   it('gets a single ISBN for a title', async () => {
@@ -56,6 +56,6 @@ describe('ISBN Client tests with Mocks', () => {
     expect(isbnClient.validateAndHyphenateIsbn(INVALID_ISBN)).toBe(null);
   });
   it('thows an Errow when looking up an empty string', () => {
-    expect(isbnClient.getISBNByTitle('')).resolves.toThrow();
+    expect(isbnClient.getISBNByTitle('')).rejects.toThrow();
   });
 });

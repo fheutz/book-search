@@ -12,7 +12,7 @@ It can also be used to find ISBN numbers of books, or search for book titles tha
 ## Features
 This library currently supports the following shops:
 * Amazon
-* Thalia
+* Thalia.de
 * Ebay
 
 These currencies are supported:
