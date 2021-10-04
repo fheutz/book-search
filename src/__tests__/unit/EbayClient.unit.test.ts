@@ -20,7 +20,7 @@ describe('Unit Tests: ebay Client tests with mocks', () => {
   it('Throws an error when you cannot fetch from ebay', async () => {
     jest.mock('axios');
     axios.get = jest.fn().mockImplementationOnce(() => new Error('Generic Error'));
-    expect(ebayClient.getBookPriceByISBN(ULTRALEARNINGISBN)).resolves.toThrowError();
+    expect(ebayClient.getBookPriceByISBN(ULTRALEARNINGISBN)).rejects.toThrowError();
   });
 
   it('Returns a Price in € for a book', async () => {

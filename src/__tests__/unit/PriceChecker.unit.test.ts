@@ -50,7 +50,7 @@ describe('Unit Tests: PriceChecker with mocks', () => {
   });
 
   it('throws an error when looking up an empty string', async () => {
-    expect(pricechecker.comparePricesByBookTitle('')).resolves.toThrowError();
-    expect(pricechecker.getBestPriceByBookTitle('')).resolves.toThrowError();
+    expect(pricechecker.comparePricesByBookTitle('')).rejects.toThrowError();
+    expect(pricechecker.getBestPriceByBookTitle('')).rejects.toThrowError();
   });
 });
